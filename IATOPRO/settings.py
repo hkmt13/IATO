@@ -43,6 +43,8 @@ INSTALLED_APPS = [
    'user',
     'django_filters',
   'djoser',
+  'service',
+  'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -163,3 +165,8 @@ STATICFILES_DIRS=[
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+#celery
+BROKER_URL="redis://127.0.0.1:6379/0"
+BROKER_TRANSPORT="redis"
+#CELERYBEAT_SCHEDULER="djcelery.scheduler.DatabaseScheduler"

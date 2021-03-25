@@ -1,7 +1,4 @@
-from django.db.models import query
-from rest_framework import serializers
-from rest_framework.response import Response, responses
-from rest_framework.views import APIView
+
 from rest_framework import generics;
 from .serlizers import UserDisplaySerlizer,UserLoginSerlizer
 from django.contrib.auth.models import User
